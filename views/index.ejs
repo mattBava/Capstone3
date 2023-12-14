@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+<% var postcount = 0 %>
+
+<div class="container">
+
+
+<h1>Welcome to my blog</h1>
+
+<% if (Count > 0) { %>
+    <% if(postcount <= Count) { %>
+       
+            <% for( let index = 0; index < Count; index++ ) { %>
+      
+                <% if (!(title[index] === "" && post[index] === "")) { %>
+                  <div class="post">
+                <h1><%= title[index] %></h1>
+                <p class = "body"><%= post[index] %></p>
+                <p class="time"><%= Time[index] %></p>
+
+                <form action="/edit" method="post" >
+                    <button name =<%=postcount%> value = "<%=postcount%>">Edit Post</button>
+                </form>
+                <% postcount++ %>
+            </div>
+                <% } %>
+           
+            <% } %> 
+    
+    <% } %>
+ 
+<% } else { %>
+    <h2>Sorry no post yet </h2>
+    <% } %>
+
+
+
+
+<form action="/post">
+    <input type="submit" value="Create Post">
+</form>
+</div>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,85 @@
+:root {
+    --text: #0f0e0d;
+    --background: #f9f8f7;
+    --primary: #998174;
+    --secondary: #F3E9E3;
+    --accent: #b89b8b;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+
+}
+
+h2 {
+    text-align: center;
+    color: var(--text);
+}
+
+input {
+    background-color: var(--primary);
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+p {
+    text-align: center;
+}
+
+.body {
+    font-size: 1.5rem;
+}
+
+.post {
+    color: var(--text);
+    background-color: var(--secondary);
+    border-radius: 10px;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.txt {
+    height: 250px;
+    overflow-wrap: break-word
+}
+
+.right {
+    float: right;
+    width: 100px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    float: right;
+    background-color: var(--accent);
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    justify-content: center;
+
+}

@@ -1,0 +1,16 @@
+
+
+<%- include("partials/header.ejs") %>
+<div class="container">
+<h1>
+  Edit your post
+</h1>
+
+<form action="/change" method = "POST">
+    <input type="text" class="post" name="postTitle" value="<%= title[postNumber] %>"><br>
+    <textarea rows="4" cols="50" class ="txt post" name="newPost" ><%= post[postNumber] %></textarea><br>
+    <input type="submit" class="right" value="Send Edit">
+</form>
+
+</div>
+<%- include("partials/footer.ejs") %>
